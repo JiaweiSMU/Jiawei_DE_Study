@@ -7,3 +7,4 @@ excerpt: Notes on topic related to Data Sutff
 ## [[Basic SQL Concepts]]
 
 ## [[SQL Coding tests]]
+test
