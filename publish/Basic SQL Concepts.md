@@ -7,7 +7,9 @@ Goes through the various operators and examples
 ### [[Aggregating]]
 Goes through Group By, various Aggregations Functions & Quirks
 ### [[Null]]
-
+The quirks of NULLs, how to filter for NULLs & how to rectify if a column has NULLs using COALESCE if we want it to have some form of value
+### [[Joins]]
+https://datadriven.io/learn/joins_beginner
 
 ### RANK
 There are 3 different types

@@ -41,7 +41,7 @@ Quirks:
 Calculates the **mean** (Sum of all values divided by count of values) for each group
 
 Quirks
-1. NULLS are skipped (e.g. if a group has values `10, NULL, 20`, the average is `15` (30/2), not `10` (30/3))
+1. ==NULLS are skipped== (e.g. if a group has values `10, NULL, 20`, the average is `15` (30/2), not `10` (30/3))
 ### MIN & MAX
 MIN - Gets the smallest value for each group
 MAX - Gets the largest value for each group
