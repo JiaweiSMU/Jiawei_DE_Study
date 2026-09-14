@@ -5,7 +5,9 @@ The various Data Types & Uses of CASTING
 ### [[Filtering]]
 Goes through the various operators and examples
 ### [[Aggregating]]
-https://datadriven.io/learn/aggregating_beginner
+Goes through Group By, various Aggregations Functions & Quirks
+### [[Null]]
+
 
 ### RANK
 There are 3 different types
