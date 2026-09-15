@@ -1,54 +1,46 @@
 ### Quirks of NULL
-
 > [!Example] 
-> A survey asking for income. NULL means the person skipped the question, 0 means they selected 0 and empty string is usually a input error
-1. NULL refers to Unknown / Not provided
-2. 0 is not the same thing as NULL, **0 is a KNOWN QUANTITY**
-3. An empty string (`''`) is different from NULL.
-4. NULL is not equal to another NULL
-	1. ==NULL = NULL doesn't return TRUE==, it returns NULL
+>  A survey asking for income. NULL means the person skipped the question, `0` means they entered `0`, and an empty string is usually an input error.
+1. NULL means unknown / not provided.
+2. `0` is not the same as NULL - `0` is a known quantity.
+3. An empty string (`''`) is different from NULL too.
+4. NULL isn't equal to another NULL - `NULL = NULL` doesn't return TRUE, it returns NULL.
 ### Comparisons using NULL
-Any comparison involving NULL returns unknown (NULL), with zero exceptions.
-The only way to test for NULL is by using `IS NULL` / `IS NOT NULL`
-
+Any comparison involving NULL returns unknown (NULL), with zero exceptions. The only way to test for NULL is with `IS NULL` / `IS NOT NULL`.
 ### IS NULL / IS NOT NULL
-Since `=` or `!=` can't be used to check for NULL. We need to use `IS NULL` or `IS NOT NULL`
-
-```
-Select
-	customer_id,
-	name,
-	phone
-from customers
+Since `=` and `!=` can't be used to check for NULL, you need `IS NULL` or `IS NOT NULL` instead.
+```sql
+SELECT
+    customer_id,
+    name,
+    phone
+FROM customers
 WHERE phone IS NULL
 
-Select
-	customer_id,
-	name,
-	phone
-from customers
+SELECT
+    customer_id,
+    name,
+    phone
+FROM customers
 WHERE phone IS NOT NULL
 ```
-
-### Handling NULL Values with ==COALESCE==
-Coalesce replaces NULL with a value
-```
+### Handling NULL Values with COALESCE
+`COALESCE` replaces NULL with a value you specify.
+```sql
 SELECT
-	cust_id,
-	name,
-	COALESCE(phone, 0) # If null, sets phone number as 0
-from customers
+    cust_id,
+    name,
+    COALESCE(phone, 0) -- if NULL, sets phone to 0
+FROM customers
 ```
-
 ### Count behaviours with NULL
-> [!Example] 
-> So if you've got 10 rows and 3 of them have NULL in the discount column, COUNT(*) gives you 10, but COUNT(discount) gives you 7
-- COUNT(`*`) will count all rows including those with NULL values
-- COUNT(column) only counts rows where that specific column actually has a value, skipping any row where it's NULL
+- `COUNT(*)` counts all rows, including ones with NULL values. 
+- `COUNT(column)` only counts rows where that column actually has a value, skipping NULLs. 
+So with 10 rows where 3 have NULL in `discount`, `COUNT(*)` gives you 10, but `COUNT(discount)` gives you 7.
 
-If we want to find out how many NULL values are in a particular column
-```
+To find how many NULLs are in a column, subtract the two:
+```sql
 SELECT
-	COUNT(*) - COUNT(col) as missing_vals
-from table
+    COUNT(*) - COUNT(col) as missing_vals
+FROM table
 ```

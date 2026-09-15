@@ -1,3 +1,10 @@
+```
+SQL Query Execution Logic
+1. FROM
+2. JOIN
+3. WHERE
+4. SELECT
+```
 ### [[Query Structure]]
 How to use AS and EXPRESSIONS when querying
 ### [[Data Types]]
@@ -9,8 +16,13 @@ Goes through Group By, various Aggregations Functions & Quirks
 ### [[Null]]
 The quirks of NULLs, how to filter for NULLs & how to rectify if a column has NULLs using COALESCE if we want it to have some form of value
 ### [[Joins]]
-https://datadriven.io/learn/joins_beginner
-
+Inner joins and some quirks of joins
+### [[String Functions]]
+Going through some basic string functions (Concat, Lower, Upper & Length)
+### [[Dates]]
+The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF() functions
+### [[Complex Data]]
+https://datadriven.io/learn/complex_data_beginner
 ### RANK
 There are 3 different types
 1. ROW_NUMBER - Gives every row a unique number

@@ -1,17 +1,14 @@
 ### Using AS
-e.g:
+```sql
+SELECT name AS full_name
+SELECT * FROM users AS u
 ```
-1. select name **AS full_name**
-2. select * from users **AS u**
-```
-
+`AS` renames a column or table in the output - the first example relabels a column, the second gives the table itself a shorter alias to reference elsewhere in the query.
 ### Using Expressions in SELECT
-Expression: Combination of values, operators & functions for the database to evaluate to produce a result
-
-e.g.:
-```
-select 
-	**price + tax** AS total_price
-	quantity * unit_price AS total_cost
-from orders
+An expression is a combination of values, operators, and functions that the database evaluates to produce a result - you're not limited to selecting raw columns.
+```sql
+SELECT
+    price + tax AS total_price,
+    quantity * unit_price AS total_cost
+FROM orders
 ```
