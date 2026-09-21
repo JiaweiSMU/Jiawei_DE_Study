@@ -1,3 +1,13 @@
+> [!NOTE] Order
+> 1. `WHERE` runs before window function, so to filter the result of a window function, we need to wrap it as a CTE / Subquery and filter it.
+> 2. `GROUP BY` runs before window functions, so aggregates are already computed by the time the window function runs — which means you can rank, partition, or otherwise window over an aggregate as if it were an ordinary column
+> 	- The window function also sees the full grouped result of the `Group By` (e.g. one row per group)
+### Filter Order
+`WHERE` runs before window function, so to filter the result of a window function, we need to wrap it as a CTE / Subquery and filter it.
+Order:
+1. **`WHERE` in the inner query — runs first, before the window function.** This decides which rows the window function is even allowed to see. 
+2. **The window function runs** on whatever survived step 1.
+3. **`WHERE` in the outer query — runs last.** This filters on the window function's output, which is why you need the CTE. `rn = 1` goes here.
 ### Syntax
 ```sql
 -- Function: 
@@ -30,10 +40,14 @@ SELECT name, dept, salary,
 FROM employees;
 ```
 So `PARTITION BY dept` produces the same numbers as `GROUP BY dept` — it just keeps the rows instead of collapsing them.
-## Ranking:
+## Ranking Functions:
+1. `ROW_NUMBER()`: Gives a unique number for every row even for ties (e.g. 1, 2, 3, 4)
+2. `RANK()`: Gives same number for ties, ==**SKIPS** number== (e.g. 1, 1, 3, 4, 4, 6)
+3. `DENSE_RANK()`: Gives same number for ties, ==**NO SKIP** of number== (e.g. 1, 1, 2, 3, 3, 4)
+![[Pasted image 20260921205313.png]]
 ### ROW_NUMBER()
-`ROW_NUMBER()` hands out counting numbers (1, 2, 3) to the rows in each partition, and the ==`ORDER BY`== inside the `OVER()` decides **who gets to be number 1**
-- The common use is **deduplication**: keeping only the most recent (or highest, or first) version of each record.
+`ROW_NUMBER()` gives a number (1, 2, 3) to the rows in each partition, and the ==`ORDER BY`== inside the `OVER()` decides **who gets to be number 1**
+- Common use is **deduplication**: keeping only the most recent (or highest, or first) version of each record.
 ```sql
 -- Groups rows by employee id, sorts each group highest salary first, then keeps only the top row per employee
 WITH x AS (
@@ -43,3 +57,4 @@ WITH x AS (
 )
 SELECT * FROM x WHERE rn = 1;
 ```
+## LEAD & LAG
