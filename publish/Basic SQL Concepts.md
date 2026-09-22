@@ -25,15 +25,10 @@ Inner joins and some quirks of joins
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]
 The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF() functions
-### [[Window Function]]
-
-To cont: https://www.stratascratch.com/learn/comprehensive-sql/partition-by-and-ranking-functions
-### RANK
-There are 3 different types
-1. ROW_NUMBER - Gives every row a unique number
-2. RANK - Possible to have ties e.g. (1, 1, 3). If so, it jumps a rank
-3. DENSE_RANK - Ties share the same rank, there is no jump
-	1. Whenever question ask if **TIED show all**, use DENSE_RANK
+### [[Ranking]]
+- [[Ranking]]
+- [[Lead & Lag]]
+To cont: [https://www.stratascratch.com/learn/comprehensive-sql/partition-by-and-ranking-functions](https://www.stratascratch.com/learn/comprehensive-sql/lag-and-lead)
 
 ### LAG & LEAD
 These are a form of **WINDOW FUNCTION** and need to be used together with <u>*ORDER BY inside OVER(...)*</u>

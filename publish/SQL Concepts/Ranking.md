@@ -57,4 +57,3 @@ WITH x AS (
 )
 SELECT * FROM x WHERE rn = 1;
 ```
-## LEAD & LAG
