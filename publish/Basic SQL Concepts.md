@@ -28,7 +28,7 @@ The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF(
 ### [[Ranking]]
 - [[Ranking]]
 - [[Lead & Lag]]
-To cont: [https://www.stratascratch.com/learn/comprehensive-sql/partition-by-and-ranking-functions](https://www.stratascratch.com/learn/comprehensive-sql/lag-and-lead)
+To cont: https://www.stratascratch.com/learn/comprehensive-sql/aggregate-window-functions
 
 ### LAG & LEAD
 These are a form of **WINDOW FUNCTION** and need to be used together with <u>*ORDER BY inside OVER(...)*</u>
