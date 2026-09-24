@@ -25,10 +25,10 @@ Inner joins and some quirks of joins
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]
 The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF() functions
-### [[Ranking]]
+### [[Window Function]]
 - [[Ranking]]
 - [[Lead & Lag]]
-To cont: https://www.stratascratch.com/learn/comprehensive-sql/aggregate-window-functions
+
 
 ### LAG & LEAD
 These are a form of **WINDOW FUNCTION** and need to be used together with <u>*ORDER BY inside OVER(...)*</u>

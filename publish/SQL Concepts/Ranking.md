@@ -17,8 +17,14 @@ Order:
 <function>(<args>) OVER ( 
 	[PARTITION BY col1, col2, ...] 
 	[ORDER BY col3 [ASC|DESC] [NULLS FIRST|LAST]] 
-	[ROWS | RANGE BETWEEN <start> AND <end>] 
+	[ROWS | RANGE BETWEEN <start> AND <end>] -- Rows / Range
 )
+-- Rows / Range:
+	-- Unbounded Preceding: First row of the partition
+	-- n Preceding: n rows before current
+	-- Current Row: This row
+	-- n Following: n rows after current
+	-- Unbounded Following: Last row of the partition
 ```
 ### Difference between Group By & Window Function
 Both do calculations over a set of related rows. The difference is what comes back.
