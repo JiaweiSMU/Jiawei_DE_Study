@@ -21,6 +21,7 @@ Goes through Group By, various Aggregations Functions & Quirks
 The quirks of NULLs, how to filter for NULLs & how to rectify if a column has NULLs using COALESCE if we want it to have some form of value
 ### [[Joins]]
 Inner joins and some quirks of joins
+https://www.stratascratch.com/learn/comprehensive-sql/understanding-table-relationships
 ### [[String Functions]]
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]
