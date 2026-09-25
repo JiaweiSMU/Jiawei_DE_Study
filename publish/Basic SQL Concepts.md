@@ -20,8 +20,11 @@ Goes through Group By, various Aggregations Functions & Quirks
 ### [[Null]]
 The quirks of NULLs, how to filter for NULLs & how to rectify if a column has NULLs using COALESCE if we want it to have some form of value
 ### [[Joins]]
-Inner joins and some quirks of joins
-https://www.stratascratch.com/learn/comprehensive-sql/understanding-table-relationships
+NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anything` return unknown rather than true, and joins only keep pairs where the condition is true - so rows with NULL join keys never match anything, including other NULLs.
+- [[Union]]
+- [[Inner Join]]
+- [[Left & Right Join]]
+- 
 ### [[String Functions]]
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]
@@ -30,6 +33,8 @@ The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF(
 - [[Ranking]]
 - [[Lead & Lag]]
 
+DISTINCT
+- When using DISTINCT itself, it applies to every column in the SELECT list
 
 ### LAG & LEAD
 These are a form of **WINDOW FUNCTION** and need to be used together with <u>*ORDER BY inside OVER(...)*</u>
