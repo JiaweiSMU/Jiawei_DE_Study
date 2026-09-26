@@ -6,4 +6,4 @@ excerpt: Notes on topic related to Data Sutff
 ## AWS
 ## [[Basic SQL Concepts]]
 
-## [[SQL Coding tests]]
+## [[SQL Coding Patterns]]

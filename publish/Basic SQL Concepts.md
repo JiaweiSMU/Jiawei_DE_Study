@@ -19,27 +19,20 @@ Goes through the various operators and examples
 Goes through Group By, various Aggregations Functions & Quirks
 ### [[Null]]
 The quirks of NULLs, how to filter for NULLs & how to rectify if a column has NULLs using COALESCE if we want it to have some form of value
-### [[Joins]]
+### Joins
 NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anything` return unknown rather than true, and joins only keep pairs where the condition is true - so rows with NULL join keys never match anything, including other NULLs.
-- [[Union]]
-- [[Inner Join]]
-- [[Left & Right Join]]
-- 
+- [[Union]]: Stack results of 2 queries 
+- [[Inner Join]]: Keep only rows that have a match in both tables.
+- [[Left Join]]: Keep every row from the left table. Where the right table has a match, we get its columns; otherwise they're NULL.
+- [[Full Outer Join]]: Keep every row from both tables. Matched rows are combined, and unmatched rows get NULL for the missing side's columns.
+- [[Cross Join]]
 ### [[String Functions]]
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]
 The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF() functions
 ### [[Window Function]]
 - [[Ranking]]
-- [[Lead & Lag]]
+- [[Lead & Lag]]: Look forward / backwards
 
 DISTINCT
 - When using DISTINCT itself, it applies to every column in the SELECT list
-
-### LAG & LEAD
-These are a form of **WINDOW FUNCTION** and need to be used together with <u>*ORDER BY inside OVER(...)*</u>
-> Syntax for LAG / LEAD
-> 	LAG(column, offset, default)
-> 	Offset refers to get value from X row
-- LAG - Gets value from the row before
-- LEAD - Get value from a later row
