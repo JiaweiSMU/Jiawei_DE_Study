@@ -25,7 +25,7 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[Inner Join]]: Keep only rows that have a match in both tables.
 - [[Left Join]]: Keep every row from the left table. Where the right table has a match, we get its columns; otherwise they're NULL.
 - [[Full Outer Join]]: Keep every row from both tables. Matched rows are combined, and unmatched rows get NULL for the missing side's columns.
-- [[Cross Join]]
+- [[Cross Join]]: 
 ### [[String Functions]]
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]

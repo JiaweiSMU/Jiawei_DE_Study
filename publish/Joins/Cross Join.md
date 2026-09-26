@@ -1,0 +1,1 @@
+https://www.stratascratch.com/learn/comprehensive-sql/cross-join
