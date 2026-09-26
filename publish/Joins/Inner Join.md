@@ -2,8 +2,7 @@
 > Inner Join combines two table SIDE BY SIDE, putting columns from both tables into one row. It only keeps rows where the join condition (`ON  x.id = y.id`) finds a match in both tables
 > 
 > Use when we want rows that have a **match on both sides**
-- If a row from the left table has no match in the right table, it's gone, the same goes in reverse
-
+> 	- If a row from the left table has no match in the right table, it's gone, the same goes in reverse
 ### Using WHERE and aggregation with JOINs
 The JOIN happens first and builds one combined table. 
 Everything after it works on that combined table. 

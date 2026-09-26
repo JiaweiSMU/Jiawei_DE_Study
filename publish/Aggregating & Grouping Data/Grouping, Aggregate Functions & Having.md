@@ -7,7 +7,7 @@ SELECT
 FROM transactions
 GROUP BY region
 ```
-When grouping by more than one column, each unique combination of values becomes its own group.
+When **grouping by more than one column, each unique combination of values becomes its own group**.
 ```sql
 SELECT
     region,
@@ -16,15 +16,16 @@ SELECT
 GROUP BY region, product
 ```
 
-**Before**:  ![[Pasted image 20260914215537.png]]
+**Before**: 
+![[Pasted image 20260914215537.png]]
 **After**:  ![[Pasted image 20260914215516.png]]
 #### Rules of Group By
 1. Every column in the SELECT must either be in the GROUP BY clause or wrapped in an aggregate function (COUNT, SUM, AVG, etc.)
 ### Types of Aggregations
 #### Counts
 1. `COUNT(*)` — how many rows are in each group.
-2. `COUNT(<col>)` — counts only rows where that specific column is not NULL.
-3. `COUNT(DISTINCT <col>)` — counts only unique values, ignoring duplicates.
+2. `COUNT(<col>)` — counts only rows where that specific column **is not NULL.**
+3. `COUNT(DISTINCT <col>)` — counts only **unique values, ignoring duplicates.**
 #### SUM
 Gets totals broken down by category (whatever you grouped by).
 ![[Pasted image 20260914220159.png]]
@@ -48,7 +49,7 @@ FROM orders
 GROUP BY cust_id
 ```
 #### HAVING
-Filters groups after aggregation, the same way WHERE filters rows before aggregation. 
+**Filters** groups **after aggregation**, the same way WHERE filters rows before aggregation. 
 The reason you need a separate keyword is that WHERE runs before grouping even happens, so it has no access to aggregate values like `COUNT(*)` or `SUM(amount)` to filter on.
 
 You can use both in the same query - when you do, they run in this order: 

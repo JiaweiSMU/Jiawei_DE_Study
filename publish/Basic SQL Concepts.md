@@ -9,23 +9,26 @@
 8. **`DISTINCT`** — dedupes whatever `SELECT` produced.
 9. **`ORDER BY`** — sorts the final result. Runs after `SELECT`, so it _can_ use aliases.
 10. **`LIMIT` / `OFFSET`** — trims the sorted result.
-### [[Query Structure]]
-How to use AS and EXPRESSIONS when querying
-### [[Data Types]]
-The various Data Types & Uses of CASTING
-### [[Filtering]]
-Goes through the various operators and examples
-### [[Aggregating]]
-Goes through Group By, various Aggregations Functions & Quirks
-### [[Null]]
-The quirks of NULLs, how to filter for NULLs & how to rectify if a column has NULLs using COALESCE if we want it to have some form of value
+### SQL Basics
+- [[Filtering]]
+- [[Pattern Matching]]: Filtering but using LIKE (`%` & `_`) and BETWEEN
+- [[Null]]: Quirks of NULLs, filter for NULLs & how to rectify if a column has NULLs using COALESCE
+- [[Query Structure]]: Using Expressions & Aliases
+### Aggregating & Grouping Data
+- [[Grouping, Aggregate Functions & Having]]
+- [[Case]]
 ### Joins
 NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anything` return unknown rather than true, and joins only keep pairs where the condition is true - so rows with NULL join keys never match anything, including other NULLs.
 - [[Union]]: Stack results of 2 queries 
 - [[Inner Join]]: Keep only rows that have a match in both tables.
 - [[Left Join]]: Keep every row from the left table. Where the right table has a match, we get its columns; otherwise they're NULL.
 - [[Full Outer Join]]: Keep every row from both tables. Matched rows are combined, and unmatched rows get NULL for the missing side's columns.
-- [[Cross Join]]: 
+- [[Cross Join]]: Pairs **every row in one table with every row in the other**. Resulting in (m * x) num of rows
+- [[Self Joins]]: Used when rows in a table relate to oneself (E.g. Employee table containing employees and manager)
+### Subqueries & CTEs
+- [[Subqueries]]
+### [[Data Types]]
+The various Data Types & Uses of CASTING
 ### [[String Functions]]
 Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Dates]]
