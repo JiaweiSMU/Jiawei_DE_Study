@@ -1,4 +1,7 @@
-LAG and LEAD let a row look at another row's value — `LAG` looks backward, `LEAD` looks forward, and you can choose how many rows away.
+### Syntax
+LAG and LEAD let a row look at another row's value:
+- `LAG` looks backward 
+- `LEAD` looks forward
 ```sql
 LAG(expression , offset, default]])  OVER ([PARTITION BY col] ORDER BY col)
 LEAD(expression , offset, default]]) OVER ([PARTITION BY col] ORDER BY col)
@@ -9,10 +12,32 @@ LEAD(expression , offset, default]]) OVER ([PARTITION BY col] ORDER BY col)
 - **Default**: Value to return when there's no row at that offset, if left empty it just returns 0
 - **Order** **By**: Defines what "before" and "after" mean. Rows have no inherent order, so without it there's nothing to step backwards / forward
 - **Partition By**: 
-
-> [!NOTE] Common uses
-> 1. To get the time since someone's last action
-> 2. Period over Period change
+### Examples
+> [!NOTE] Note
+> Ascending order (smallest → biggest, oldest → newest)
+> - `LAG`: Returns Prev Month / Smaller Val
+> - `LEAD`: Returns Next Month / Bigger Val
+>Descending order (biggest → smallest, newest → oldest)
+>- `LAG`: Returns Next Month / Bigger Val
+>- `LEAD`: Returns Prev Month / Smaller Val
+1. **Ascending order (smallest → biggest, oldest → newest)**
+```sql
+SELECT 
+	month, revenue, 
+	LAG(revenue) OVER (ORDER BY month ASC) AS prev_month, 
+	LEAD(revenue) OVER (ORDER BY month ASC) AS next_month 
+FROM sales;
+```
+![[Pasted image 20260927211951.png]]
+2. **Descending order (biggest → smallest, newest → oldest)**
+```sql
+SELECT 
+	month, revenue, 
+	LAG(revenue) OVER (ORDER BY month DESC) 
+	LEAD(revenue) OVER (ORDER BY month DESC)
+FROM sales;
+```
+![[Pasted image 20260927212154.png]]
 ### Ways to handle NULLs
 1. Filter the NULL value out
 	- ```sql

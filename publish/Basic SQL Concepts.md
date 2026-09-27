@@ -46,7 +46,9 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[String Function]]
 ### [[Window Function]]
 - [[Ranking]]
-- [[Lead & Lag]]: Look forward / backwards
-
+- [[Lead & Lag]]: 
+	- Always sort by `ASCENDING` (Jan, Feb, Mar ...) and choose `LAG / LEAD` depending on the question
+		-  **`LAG`**: look **back** at the row above ("what was it before?")
+		- **`LEAD`**: look **ahead** at the row below ("what comes next?")
 DISTINCT
 - When using DISTINCT itself, it applies to every column in the SELECT list
