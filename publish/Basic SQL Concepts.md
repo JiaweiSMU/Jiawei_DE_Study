@@ -19,6 +19,17 @@
 - [[Case]]
 ### Joins
 NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anything` return unknown rather than true, and joins only keep pairs where the condition is true - so rows with NULL join keys never match anything, including other NULLs.
+> [!Cheatsheet] Cheatsheet
+> The deciding question for all of them is the same: **when a row has no match, should it appear in the result, and from which side?**
+> 
+> |Join|Keeps|Unmatched rows|Typical use|
+|---|---|---|---|
+|**INNER**|Only matches|Dropped from both sides|Records that must exist in both tables|
+|**LEFT**|All left rows|Right columns become NULL|Main list plus optional details; anti-join (`IS NULL`) to find missing|
+|**RIGHT**|All right rows|Left columns become NULL|Rarely; rewrite as LEFT|
+|**FULL OUTER**|Everything|NULLs on whichever side is missing|Reconciliation, finding gaps on both sides|
+|**CROSS**|Every combination|No matching involved|Building grids (dates × categories)|
+|**SELF**|Depends on join used|Depends on join used|Comparing rows in the same table (employee vs manager)|
 - [[Union]]: Stack results of 2 queries 
 - [[Inner Join]]: Keep only rows that have a match in both tables.
 - [[Left Join]]: Keep every row from the left table. Where the right table has a match, we get its columns; otherwise they're NULL.
@@ -26,7 +37,11 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[Cross Join]]: Pairs **every row in one table with every row in the other**. Resulting in (m * x) num of rows
 - [[Self Joins]]: Used when rows in a table relate to oneself (E.g. Employee table containing employees and manager)
 ### Subqueries & CTEs
-- [[Subqueries]]
+- [[Subqueries]]: Various type of subqueries (Filtering, Select & From)
+- [[CTEs]]: When to Pre-Aggregate in a CTE before joining
+- [[CTE Patterns for Common Problems]]
+### Date, Time & Text Functions
+
 ### [[Data Types]]
 The various Data Types & Uses of CASTING
 ### [[String Functions]]

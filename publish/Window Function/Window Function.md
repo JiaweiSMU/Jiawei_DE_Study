@@ -5,3 +5,4 @@
 > - Moving average: `AVG() OVER (ROWS BETWEEN n PRECEDING AND CURRENT ROW)`
 > - Percentile: `NTILE(100)` or `PERCENT_RANK()`
 > - Consecutive streaks: `ROW_NUMBER()` + date arithmetic
+
