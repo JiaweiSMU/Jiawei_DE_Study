@@ -41,14 +41,14 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[CTEs]]: When to Pre-Aggregate in a CTE before joining
 - [[CTE Patterns for Common Problems]]
 ### Date, Time & Text Functions
-- [[Time Data Types & Extraction]]
+- [[Time Data Types & Extraction]]: Various Date / Time Data type & How to extract parts of date
+- [[Date Arithmetic & Truncation]]
+- [[String Function]]
 
 ### [[Data Types]]
 The various Data Types & Uses of CASTING
 ### [[String Functions]]
 Going through some basic string functions (Concat, Lower, Upper & Length)
-### [[Dates]]
-The difference between DATE & Timestamp, usefulness of DATE_ADD() and DATE_DIFF() functions
 ### [[Window Function]]
 - [[Ranking]]
 - [[Lead & Lag]]: Look forward / backwards
