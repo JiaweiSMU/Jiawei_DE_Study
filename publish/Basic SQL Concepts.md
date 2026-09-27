@@ -41,6 +41,7 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[CTEs]]: When to Pre-Aggregate in a CTE before joining
 - [[CTE Patterns for Common Problems]]
 ### Date, Time & Text Functions
+- [[Time Data Types & Extraction]]
 
 ### [[Data Types]]
 The various Data Types & Uses of CASTING
