@@ -44,11 +44,6 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[Time Data Types & Extraction]]: Various Date / Time Data type & How to extract parts of date
 - [[Date Arithmetic & Truncation]]
 - [[String Function]]
-
-### [[Data Types]]
-The various Data Types & Uses of CASTING
-### [[String Functions]]
-Going through some basic string functions (Concat, Lower, Upper & Length)
 ### [[Window Function]]
 - [[Ranking]]
 - [[Lead & Lag]]: Look forward / backwards
