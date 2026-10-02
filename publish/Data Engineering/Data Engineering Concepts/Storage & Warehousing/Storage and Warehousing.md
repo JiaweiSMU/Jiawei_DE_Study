@@ -1,0 +1,1 @@
+[[OLTP (Online Transactional Processing)]]
