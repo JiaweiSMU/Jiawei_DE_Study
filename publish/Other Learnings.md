@@ -1,0 +1,12 @@
+# How to articulate one thoughts more clearly
+- Being articulate means to deliver something fluently and coherently
+	- Coherent: Clear & Concise
+- When deciding what to say
+	- Understanding of the topic being shared
+	- Clarify what's the goal of the talk
+	- Find fastest path for explaining
+	- Anticipate questions & incorporate answers in the talk
+- Delivery
+	- Remove flowery language
+	- Top down approach (Main idea at the beginning)
+	- Show with detail instead of telling

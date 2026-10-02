@@ -1,4 +1,44 @@
-### Histogram Pattern
+> [!NOTE] Find the `GRAIN` before starting
+> - **Input grain:** one row of the source table, e.g. one row per event.
+> - **Output grain:** one row of the answer, e.g. one row per user.
+> 
+> Count how many rows the answer should have:
+> - **Fewer Rows**: If several input rows get squashed into one `USE GROUP BY`
+> - **Same Num of Rows**: Some sort of `WINDOW FUNCTION`
+
+For every `something.column`, that `something` needs to appear in the query's `FROM / JOIN`. If it doesn't then we need to join it or wrap it in a Subquery to use the `something` value
+### Conditional Aggregation
+Using `CASE` within an `AGGREGATE` like `MAX, MIN, SUM etc.`
+- Review [[Case]] here
+```sql
+MAX(CASE WHEN action = 'A' THEN <col>) END <alias>
+						-- We are able to pass in a Col value here
+```
+### Semi Join
+You want to filter One Table by whether **related rows exist** in another. When this is used, we are NOT ABLE to retrieve columns from the other table.
+```sql
+-- Customers who HAVE placed at least one order 
+SELECT 
+c.name 
+FROM customers c 
+WHERE EXISTS 
+	( SELECT 1 FROM orders o WHERE o.customer_id = c.id and o.value > 50);
+	-- We are able to filter within this sub-table itself
+	-- Use return 1 since outer query can't use the values
+```
+- Review [[Subqueries]], Subqueries for filtering #3
+### Duplicate Detection Problem
+When asked to **find rows that share a value with one other row**
+1. **Join the table to itself on the shared column** (`w1.salary = w2.salary`), which pairs up everyone with the same value.
+2. **Exclude self-matches with `<>` on the unique ID** so a row can't qualify just by matching itself.
+3. **Select from one side only and add `DISTINCT`.** Anyone sharing a value with _n_ others appears _n_ times, so you need to deduplicate.
+
+### Stack and Aggregate
+Append rows from several sources with `UNION ALL`, then `GROUP BY` to combine them.
+- `UNION ALL`: So duplicate rows are not removed
+> [!NOTE] How to spot it
+> - The **same kind of measure** is split across two or more tables: history and current, several regions, several years.
+### Histogram **Pattern**
 A histogram maps **values → frequency of occurrence**. 
 - Count **per item occurrence** first (e.g. user posted how many tweets), then **count how many items share the same count.**
 	1. Group by item, then count

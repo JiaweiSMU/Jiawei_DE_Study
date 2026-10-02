@@ -17,6 +17,8 @@
 ### Aggregating & Grouping Data
 - [[Grouping, Aggregate Functions & Having]]
 - [[Case]]
+	- **Syntax Rule:** Use `CASE WHEN ... THEN ... END` (SQL does not use `CASE IF`).
+	- **Aggregation**: To put `CASE` inside the function `SUM(CASE WHEN ... THEN END)
 ### Joins
 NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anything` return unknown rather than true, and joins only keep pairs where the condition is true - so rows with NULL join keys never match anything, including other NULLs.
 > [!Cheatsheet] Cheatsheet
@@ -45,10 +47,14 @@ NULL values in join columns cause row loss, since `NULL = NULL` and `NULL = anyt
 - [[Date Arithmetic & Truncation]]
 - [[String Function]]
 ### [[Window Function]]
-- [[Ranking]]
+- [[Ranking]]:
+	1. `ROW_NUMBER()`: Gives a unique number for every row even for ties (e.g. 1, 2, 3, 4)
+	2. `RANK()`: Gives same number for ties, ==**SKIPS** number== (e.g. 1, 1, 3, 4, 4, 6)
+	3. `DENSE_RANK()`: Gives same number for ties, ==**NO SKIP** of number== (e.g. 1, 1, 2, 3, 3, 4)
 - [[Lead & Lag]]: 
 	- Always sort by `ASCENDING` (Jan, Feb, Mar ...) and choose `LAG / LEAD` depending on the question
 		-  **`LAG`**: look **back** at the row above ("what was it before?")
 		- **`LEAD`**: look **ahead** at the row below ("what comes next?")
+- [[Sliding Window]]
 DISTINCT
 - When using DISTINCT itself, it applies to every column in the SELECT list

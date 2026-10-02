@@ -39,12 +39,29 @@ SELECT
 c.name 
 FROM customers c 
 WHERE EXISTS 
-	( SELECT 1 FROM orders o WHERE o.customer_id = c.id );
+	( SELECT 1 FROM orders o WHERE o.customer_id = c.id and o.value > 50);
+	-- We are able to filter within this sub-table itself
 	-- Use return 1 since outer query can't use the values
 ```
 
 SQL goes through `customers` ==one row at a time and asks==, "Is there any row in `orders` for this customer?![[Pasted image 20260927001618.png]]
 
+#### 4. Subqueries in HAVING
+```sql
+with cnt as (
+SELECT
+  COUNT(DISTINCT(product_category)) as uniq_prod_cat 
+FROM products
+)
+SELECT
+  c.customer_id
+FROM customer_contracts c
+INNER JOIN products p
+on c.product_id = p.product_id
+GROUP BY c.customer_id
+HAVING COUNT(DISTINCT(product_category)) = 
+  (select uniq_prod_cat from cnt)
+```
 ### Subqueries in `SELECT`
 For each row, it only produces a single `Row & Column`
 - If more than 1 row is returned, an error is produced. Some aggregate (`MAX, SUM, COUNT`) is required to guarantee it returns a single row.

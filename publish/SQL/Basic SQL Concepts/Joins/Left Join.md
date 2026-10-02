@@ -1,4 +1,3 @@
-
 > [!NOTE] 
 > Keeps EVERY row from the Left table, if the right side has a match, the column will be added else the column will show up as NULL.
 e.g.:
