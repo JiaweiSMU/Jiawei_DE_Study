@@ -16,7 +16,7 @@ Ensures that when multiple users are reading and writing from the same table at 
 Setting on a transaction that will decide how much interference from other concurrent transactions it will tolerate.
 - There are trade-offs to be made at each Isolation level
 ![[Pasted image 20261002233344.png]]
-
+Cont tmr
 #### Read phenomena
 - **Dirty Read**: When another transaction can read data that has yet been written but not committed
 	1. T2 updates a customer's address to "B" and has not committed.
