@@ -1,5 +1,0 @@
-# [[Books]]
-
-# [[Data Engineering Concepts]]
-- 
-- 
