@@ -10,4 +10,17 @@
 	- [[Data Lake]] --> [[Data Mart]]
 	- [[Data Lakehouse]] --> [[Data Mart]]
 ### Open Table & File Formats
-- [[Data Lake File Format]]
+> [!NOTE] Append only tables vs Update tables
+> Append-only suits events, which never change after they happen. Updatable tables suit things that have a current state.
+- Open Table
+	- [[Data Lake File Format]]
+	- [[Data Lake Table Format]]
+- File Formats
+	- [[Parquet]]
+	- [[Iceberg]]
+	- [[Delta Lake]]
+- [[Time Travel]]
+### Data Architecture & Stacks
+- [[Data Engineering Architecture]]
+- [[Medallion Architecture]]
+- [[Inmon vs Kimball]]

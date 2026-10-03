@@ -1,4 +1,4 @@
-A type of storage system that is used to store both unstructured, semi-structured and structured data and they support many different file formats.
+A type of storage system that is used to store both unstructured, semi-structured and structured data and they support many different file formats (e.g. [[Parquet]])
 - Data is `stored as-is` without any specific purpose
 ### Key Capabilities
 - Capture & Store raw data at scale cheaply
