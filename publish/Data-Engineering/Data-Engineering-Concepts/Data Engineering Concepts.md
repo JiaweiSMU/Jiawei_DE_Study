@@ -24,3 +24,6 @@
 - [[Data Engineering Architecture]]
 - [[Medallion Architecture]]
 - [[Inmon vs Kimball]]
+### Data Modelling
+- [[Dimension Modelling]]
+- [[Data Vault]]
