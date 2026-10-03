@@ -1,4 +1,0 @@
-- [[OLTP vs OLAP]]
-	- [[OLTP (Online Transactional Processing)]]
-	- [[OLAP (Online Analytical Processing)]]
-- 
