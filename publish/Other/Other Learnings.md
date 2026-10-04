@@ -15,6 +15,7 @@ Being articulate means delivering ideas fluently and coherently (clear and conci
 2. **Think from first principles:** break the problem into basic components, explain each, then push one step further.
 3. **Take the interviewer's point of view:** by trying to ask what do they think about your approach
 ### Behavioural interviews
+[[Behavioural Interview Dump]]
 Each question tests a quality:
 - **Leadership:** how proactive you are
 - **Resilience:** how you respond to challenges or failure (e.g. "proudest accomplishment" should show an obstacle overcome)
