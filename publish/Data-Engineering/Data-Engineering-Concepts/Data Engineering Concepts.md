@@ -25,5 +25,6 @@
 - [[Medallion Architecture]]
 - [[Inmon vs Kimball]]
 ### Data Modelling
-- [[Dimension Modelling]]
-- [[Data Vault]]
+- [[Dimension Modelling]]: flourishes in the **Gold layer**, where performance, usability, and business semantics reign supreme.
+- [[Data Vault hub, link, satellite]]: shines in the **Silver layer**, where schema evolution, historical traceability, and source system integration dominate.
+- [[Normalized]]

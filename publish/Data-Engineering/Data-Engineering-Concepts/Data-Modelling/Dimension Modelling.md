@@ -1,4 +1,7 @@
 ![[Pasted image 20261003233715.png]]The goal is to take raw data and ==transform it into `Fact` and `Dimension`== tables that represent the business.
+### Core Idea
+**Reduce the number of joins required** at query time.
+- Adding a new column, might lock up a lot of rows
 ### How to do dimensional modelling
 1.  **Declare the grain**: one sentence stating ==what a single row of the `fact table` represents== (`e.g.`: one row per month per country). 
 	- Choose the ==lowest grain== the source provides. Going up is a `SUM()` and `GROUP BY` (daily -> monthly). Going down is impossible, because the detail was never stored. 

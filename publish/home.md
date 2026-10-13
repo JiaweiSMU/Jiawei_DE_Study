@@ -3,6 +3,7 @@ title: Jiawei Notes
 excerpt: Notes on topic related to Data Sutff
 ---
 ## [[Other Learnings]]
+- [[Excel]]
 
 ## Data Engineering
 - [[Data Engineering Concepts]]
