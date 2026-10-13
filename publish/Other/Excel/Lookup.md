@@ -10,6 +10,7 @@
 | `table_array`   | **Start at the column that holds the key** and stretch right to the column you want back<br><br>e.g. If the key is in column B then it should start from column B. To return the value in column D, then the range need to extend to column D | `Customers!$B:$D`                 |
 | `col_index_num` | **Counted from the start of the range** (first column = 1)                                                                                                                                                                                    | `2` → Segment                     |
 | `range_lookup`  | `FALSE` = exact match (the default choice). `TRUE` = approximate match (only for bands, and the table must be sorted)                                                                                                                         | `FALSE`                           |
+
 **Read it out loud**
 `=VLOOKUP(C2, Customers!$B:$D, 2, FALSE)`
 → Find C2 in column B of Customers, move 2 columns along, and return that value. Exact matches only.
@@ -35,4 +36,3 @@ A better version of VLOOKUP: it can **return from any column (left or right)** a
 -- Search column B for the key, return the value from column A
 =XLOOKUP(C2, Customers!$B:$B, Customers!$A:$A, "Not found")
 ```
-test
