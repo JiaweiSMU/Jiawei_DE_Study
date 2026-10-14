@@ -31,3 +31,4 @@
 - [[Fact & Dimension table]]
 	- Fact (Quantitative): Numerical & Measurable
 	- Dimensions (Descriptive): Categorical & Contextual
+- [[Slowly Changing Dimensions]]
