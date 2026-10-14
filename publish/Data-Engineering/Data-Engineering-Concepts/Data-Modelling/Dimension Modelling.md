@@ -1,4 +1,4 @@
-![[Pasted image 20261003233715.png]]The goal is to take raw data and ==transform it into `Fact` and `Dimension`== tables that represent the business.
+![[Pasted image 20261003233715.png]]The goal is to take raw data and ==transform it into [[Fact & Dimension table]] that represent the business.
 ### Core Idea
 **Reduce the number of joins required** at query time.
 - Adding a new column, might lock up a lot of rows
