@@ -4,6 +4,8 @@ excerpt: Notes on topic related to Data Sutff
 ---
 ## [[Other Learnings]]
 - [[Lookup]]
+- [[PivotTable]]
+- [[Statistical Functions]]
 
 ## Data Engineering
 - [[Data Engineering Concepts]]
