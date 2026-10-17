@@ -58,6 +58,7 @@ TBLPROPERTIES ('skip.header.line.count' = '1');
 - the file format
 - the location: the folder holding the table's files
 - partitions and their folders (for partitioned tables)
+	- Uses the [[Hive Style Partition]]
 - depending on the catalog: access permissions and statistics
 ### Limitations
 - **No checks at write:** correctness depends on every writer producing what the definition expects.
