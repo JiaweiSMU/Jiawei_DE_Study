@@ -44,5 +44,7 @@
 - [[Granularity]]
 - [[Cardinality]]
 ### Ingestion, Movement & CDC
-- [[ETL vs ELT]]
 - [[ETL (Extract, Transform, Load)]]
+- [[ELT (Extract, Load, Transform)]]
+- [[Reverse ETL]]
+- [[Change Data Capture (CDC)]]

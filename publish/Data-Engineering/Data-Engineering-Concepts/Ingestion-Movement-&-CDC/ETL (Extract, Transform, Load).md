@@ -1,7 +1,7 @@
 Data Schema has to be pre-defined ([[Schema On Write]]) and transformation completed before it reaches the final destination. 
 Whereas [[ELT (Extract, Load, Transform)]], allows you to load the data first before transforming it.
 ### Extract
-The extract job connects to the source (e.g. JDBC to Postgres) and runs a `SELECT`. 
+The extract job connects to someone and runs a `SELECT`. 
 - The query reads only ==row versions committed when its snapshot was taken==. Changes committed later are ignored. 
 #### Full extract
 Read the whole table on every run.
@@ -13,7 +13,6 @@ Read only ==new / modified records== from the source system ==since the last suc
 - **Common watermark columns:**
   - a timestamp (`modified_date`): catches inserts and updates
   - a sequential ID (`id > x`): catches **inserts only**, because an updated row keeps its ID
-
 **Issues being:**
 1. **Deletes are invisible.** A deleted row matches no query, so it stays in the warehouse forever.
 2. If the source doesn't have a reliable way to track datetime (`modified_date`) you might be left with stale data
