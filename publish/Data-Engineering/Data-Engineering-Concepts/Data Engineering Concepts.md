@@ -35,3 +35,6 @@
 	- Type 1 - **Overwrite**: Updating email addr
 	- Type 2 - **Add New Row**: Changing home address
 - [[Granularity]]
+- [[Cardinality]]
+### Ingestion, Movement & CDC
+- [[ETL]]
