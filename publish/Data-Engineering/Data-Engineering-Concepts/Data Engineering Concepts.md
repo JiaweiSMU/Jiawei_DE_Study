@@ -32,3 +32,6 @@
 	- Fact (Quantitative): Numerical & Measurable
 	- Dimensions (Descriptive): Categorical & Contextual
 - [[Slowly Changing Dimensions]]
+	- Type 1: Updating email addr
+	- Type 2: Changing home address
+- 
