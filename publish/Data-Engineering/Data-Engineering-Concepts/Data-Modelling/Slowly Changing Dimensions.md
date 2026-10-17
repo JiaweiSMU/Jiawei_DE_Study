@@ -22,6 +22,10 @@ Past orders join to that row by key when a query runs, so ==every past order now
 - **Corrections**, such as a misspelled name. The old value was never a true state, so there is no history to keep.
 - Attributes where only the **current value is ever wanted.**
 ### Type 2 - New row per version
+> [!NOTE] Surrogate Key
+> Internal key that is created to make a record unique but has no specific business value. 
+> - Generally is created by hashing all the columns and use the hash as a SK
+
 A Type 2 dimension keeps one row per version of each customer. These columns make it work:
 - `valid_from`: Start of the version
 - `valid_to`: End of the version
