@@ -3,10 +3,10 @@
 #### **Bronze**
 Stores the data `as-is`: no transformation, no business logic. Each record also carries ==load metadata== (load time, source file, run ID).
 
-It is usually `append only` and `schema-on-read`.
+It is usually `append only` and [[Schema On Read]].
 - **Append only**: a load ==only adds records==. 
 	- Why: the source keeps only its current state (rows are updated in place, an API returns the latest value). If each load overwrote bronze, earlier versions would be lost in both places.
-- **Schema-on-read**: files are stored in the format the source delivered, and nothing is checked during the load. So that the ==ingestion can then fail only for transport reasons== (API down, permission denied), never because of the data's content.
+- **[[Schema On Read]]**: files are stored in the format the source delivered, and nothing is checked during the load. So that the ==ingestion can then fail only for transport reasons== (API down, permission denied), never because of the data's content.
 
 | Load  | Source returns | Overwrite bronze holds | Append-only bronze holds                              |
 | ----- | -------------- | ---------------------- | ----------------------------------------------------- |

@@ -1,9 +1,9 @@
-A lakehouse combines the storage of a [[Data Lake]] (open files on object storage, readable by many engines) with the table behaviour of a [[Data Warehouse]](schema-on-write, transactions). 
+A lakehouse combines the storage of a [[Data Lake]] (open files on object storage, readable by many engines) with the table behaviour of a [[Data Warehouse]] ([[Schema On Write]], transactions). 
 
 **What sets it apart from a data lake**: each table has metadata recording its schema and the exact data files it contains.
 > [!NOTE] To Note
-> Lakehouse tables are **schema-on-write**. 
-> Plain files stored beside them in the same lake are still **schema-on-read**.
+> Lakehouse tables are [[Schema On Write]]. 
+> Plain files stored beside them in the same lake are still [[Schema On Read]]
 > ```sql
 > s3://bucket/
 > 	raw/orders/2026-10-03.csv      <- plain files, schema-on-read

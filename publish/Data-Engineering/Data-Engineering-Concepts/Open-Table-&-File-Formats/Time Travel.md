@@ -1,4 +1,4 @@
-It's only available for [[Data Lake Table Format]].
+It's only available for [[Lakehouse Table Format]].
 Time travel allows one to access historical version of the data because `data files` are never modified and `metadata` records the version itself
 ### Key Features
 - **Data Auditing**: To track and review historical changes or just to view historical records

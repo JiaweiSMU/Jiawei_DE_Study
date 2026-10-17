@@ -4,12 +4,12 @@ A data warehouse is the integrated, historical copy of data from many sources, s
 Data is copied from the sources by scheduled batch extract or by change data capture. It first lands in `Staging` as raw, unmodified copies, one per source. It is then transformed (keys matched across sources, names and types made consistent, history kept) into the warehouse tables.
 
 There are two approaches, which differ in where the transformation runs: 
-1. **ETL** (Extract, Transform, Load): ==staging lives outside the warehouse==. An external engine transforms the data, and ==only the result is loaded==. 
-2. **ELT** (Extract, Load, Transform): ==raw data is loaded into a staging schema inside the warehouse==, and the warehouse engine transforms it with SQL. 
+1. [[ETL (Extract, Transform, Load)]]: ==staging lives outside the warehouse==. An external engine transforms the data, and ==only the result is loaded==. 
+2. [[ELT (Extract, Load, Transform)]]: ==raw data is loaded into a staging schema inside the warehouse==, and the warehouse engine transforms it with SQL. 
 ### Modelling approaches 
 1. [[Inmon]]: build one normalized enterprise warehouse first, then derive data marts from it. 
 2. [[Kimball]]: build star-schema marts per business process, tied together by shared dimensions.
-### Structure in a Data Warehouse (schema-on-write)
+### Structure in a Data Warehouse ([[Schema On Write]])
 In a data warehouse, structure is defined before loading and enforced while loading.
 #### The steps 
 1. **Define**: the table is declared with `CREATE TABLE` (column names, types, rules such as `NOT NULL`). 

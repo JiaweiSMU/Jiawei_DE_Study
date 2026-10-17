@@ -14,7 +14,7 @@
 > Append-only suits events, which never change after they happen. Updatable tables suit things that have a current state.
 - Open Table
 	- [[Data Lake File Format]]
-	- [[Data Lake Table Format]]
+	- [[Lakehouse Table Format]]
 - File Formats
 	- [[Parquet]]
 	- [[Iceberg]]
@@ -37,4 +37,5 @@
 - [[Granularity]]
 - [[Cardinality]]
 ### Ingestion, Movement & CDC
-- [[ETL]]
+- [[ETL vs ELT]]
+- [[ETL (Extract, Transform, Load)]]
