@@ -31,6 +31,3 @@ A Type 2 dimension keeps one row per version of each customer. These columns mak
 **On a change**, the load makes two writes in one transaction:
 1. ==Close the current version==: set `valid_to` to the change time and `is_current` to false.
 2. ==Insert the new version== with a new `customer_sk`, `valid_from` equal to that same change time, `valid_to` = `9999-12-31`, and `is_current` = true.
-### Examples of when to use each type
-
-- 
