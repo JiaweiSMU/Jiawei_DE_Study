@@ -1,4 +1,4 @@
-Data is stored exactly as written, unchecked. The schema is only applied when a query reads the data. There's no validation 
+Data is stored exactly as written, unchecked. The ==schema is only applied when a query reads the data==. There's no validation 
 This is mainly for [[ELT (Extract, Load, Transform)]]
 
 There's no need to care about the data type
