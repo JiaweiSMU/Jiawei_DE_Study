@@ -64,5 +64,4 @@ TBLPROPERTIES ('skip.header.line.count' = '1');
 - **No checks at write:** correctness depends on every writer producing what the definition expects.
 - **No transactions:** while a job is rewriting files, a query can read a mix of old and new files.
 - **Data swamp:** without up-to-date definitions and an owner for each dataset, files pile up that nobody can find or trust.
-
-[[Data Lakehouse]] table formats address the first two by adding schema enforcement and atomic commits on top of lake storage.
+[[Lakehouse Table Format]] address the first two by adding schema enforcement and atomic commits on top of lake storage.
