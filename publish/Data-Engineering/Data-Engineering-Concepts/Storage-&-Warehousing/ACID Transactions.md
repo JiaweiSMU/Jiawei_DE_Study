@@ -1,5 +1,14 @@
 > [!NOTE]
 > Prevent partial writes and corrupted states. All changes must be successfully committed or rolled backed.
+### Transaction Steps
+1. `BEGIN`
+2. **Statements** (`INSERT`, `UPDATE`, `DELETE`): ==nothing is visible to other sessions yet==.
+    - Each changed row is locked and changed in memory.
+    - A **WAL record is written for each changed row** (and index entry), not for the statement. These records may ==still be in memory.==
+3. **`COMMIT`**
+    - A commit record is added to the WAL, and the WAL is flushed to disk.
+    - Then the ==changes become visible to others and permanent==, locks are released, and the client is told it succeeded.
+    - The changed table pages are written to the data files later; the WAL already makes the change safe.
 ## Atomicity: All or nothing
 **Each statement in a transaction** (to read, write, update or delete data) is treated as a single unit.
 Either all of its statements ==take effect together or none do==.

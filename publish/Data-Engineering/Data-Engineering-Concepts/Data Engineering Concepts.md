@@ -50,6 +50,6 @@
 - [[Change Data Capture (CDC)]]
 - [[Delta Load for Data Warehouse]]: Various approaches to load data from OLTP into the warehouse
 	- [[Scan & Hash Table]]
-	- [[Log-based]]
+	- [[Log-based (Write Ahead Logs)]]
 	- [[Trigger-based]]
 	- [[Watermark]]

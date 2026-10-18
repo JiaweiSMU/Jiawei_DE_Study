@@ -11,5 +11,5 @@ Identifies the ==row-level changes (inserts, updates and deletes)== committed in
     - Can miss rows that commit after the run starts but carry an earlier timestamp.
     - Depends on every writer setting `updated_at`.
 2. [[Trigger-based]]: a trigger writes each change to an audit table in the same transaction. Captures every change, but doubles the write work of every transaction.
-3. [[Log-based]]: reads the database’s transaction ==write ahead log==, which records every committed change in commit order. Captures deletes and every intermediate state with no extra work per transaction.
+3. [[Log-based (Write Ahead Logs)]]: reads the database’s transaction ==write ahead log==, which records every committed change in commit order. Captures deletes and every intermediate state with no extra work per transaction.
 
