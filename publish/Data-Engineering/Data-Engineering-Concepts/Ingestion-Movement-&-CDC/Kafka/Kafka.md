@@ -69,8 +69,7 @@ value:      {"order_id": 4217, "customer_id": 88, "status": "paid", "amount": 60
 
 
 
-Kafka Cluster: Several brokers working together
-- `Broker`: Individual Kafka Server, where it stores the logs and sends data
+
 
 How messages are organized:
 `Topics`: Think of it like a Table. Then Producer writes to it and Consumers read from the table. Named stream of related events, that are written by a `Producer`. 
