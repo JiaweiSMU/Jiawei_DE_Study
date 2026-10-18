@@ -67,6 +67,7 @@ value:      {"order_id": 4217, "customer_id": 88, "status": "paid", "amount": 60
 **[[Kafka Cluster]]**: Set of Brokers that together acts as one Kafka System, usually 3 brokers is the minimum
 - **Broker**: ==One== Kafka Server that stores partition data on its disks and serves producers and consumers
 
+# Cont in kafka cluster
 
 
 
