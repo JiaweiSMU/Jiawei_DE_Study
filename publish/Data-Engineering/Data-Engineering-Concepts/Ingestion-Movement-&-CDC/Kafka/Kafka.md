@@ -62,9 +62,9 @@ value:      {"order_id": 4217, "customer_id": 88, "status": "paid", "amount": 60
 ```
 ### Components
 **Producer**: Sends events to Brokers
-**[[Consumer Group]]**: Set of consumers that **work together to read ==one topic==** as if they were a single reader
+**[[Consumer Group]]**: Set of consumers that **work together to read ==one topic==** as if they were a single reader. Each partition is assigned to exactly one consumer
 - **Consumer**: Fetches events from Brokers
-**[[Kafka Cluster]]**: Set of Brokers that together acts as one Kafka System, usually 3 brokers us the minimum
+**[[Kafka Cluster]]**: Set of Brokers that together acts as one Kafka System, usually 3 brokers is the minimum
 - **Broker**: ==One== Kafka Server that stores partition data on its disks and serves producers and consumers
 
 

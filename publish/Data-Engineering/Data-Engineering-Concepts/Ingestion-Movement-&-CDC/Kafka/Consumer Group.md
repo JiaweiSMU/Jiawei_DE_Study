@@ -1,5 +1,6 @@
 A consumer group is a **set of consumers that share one `group.id`** and together **read a topic as one logical reader**.
 - Consumers are added to the same group in order to **share the load**
+
 Within the group, ==each partition is assigned to exactly one consumer (one consumer may hold several partitions== so that the **work is not duplicated**.
 Example:
 ```text
