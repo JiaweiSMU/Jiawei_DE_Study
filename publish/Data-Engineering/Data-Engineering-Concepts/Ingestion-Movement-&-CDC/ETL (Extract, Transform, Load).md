@@ -7,7 +7,7 @@ The extract job connects to someone and runs a `SELECT`.
 Read the whole table on every run.
 - **Why use it:** simple and always correct. Deletes are handled, because the whole table is replaced.
 - As size of table grows, it might take too long to perform a full extract of the data
-#### Incremental extract with a watermark
+#### Incremental extract with a [[Watermark]]
 Read only ==new / modified records== from the source system ==since the last successful run== instead of copying the entire dataset again.
 - **Watermark:** This can be some timestamp, ID etc. to indicate what is the **latest point of data that was previously processed**
 - **Common watermark columns:**
