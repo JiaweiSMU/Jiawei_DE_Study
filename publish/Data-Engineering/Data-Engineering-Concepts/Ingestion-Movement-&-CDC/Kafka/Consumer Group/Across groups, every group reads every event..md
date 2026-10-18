@@ -5,8 +5,8 @@ offset:   0      1      2      3      4
 event:   [o101] [o102] [o103] [o104] [o105]
 ```
 Two **groups** read this topic:
-- the **Redshift loader**, which runs in group `redshift-loader`
-- the **fraud check**, which runs in group `fraud-check`
+- **Redshift loader**, which runs in group `redshift-loader`
+- **fraud check**, which runs in group `fraud-check`
 #### What happens
 > [!NOTE] Bookmark
 > It refers to the `offset` (e.g. 1, 2, 3) the consumer will read next
