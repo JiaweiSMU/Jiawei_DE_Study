@@ -1,0 +1,1 @@
+To write about why need a kafka cluster

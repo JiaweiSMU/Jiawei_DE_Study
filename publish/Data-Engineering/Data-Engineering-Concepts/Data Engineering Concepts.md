@@ -53,3 +53,6 @@
 	- [[Log-based (Write Ahead Logs)]]
 	- [[Trigger-based]]
 	- [[Watermark]]
+- [[Kafka Cluster]]
+	- [[Kafka]]
+- [[Backfill]]
