@@ -11,6 +11,7 @@ topic                                   cluster
          └─ record (an event),                     (one leader + followers
             at an offset                            per partition)
 ```
+- **Topic**: Name for a set of partitions (e.g. `orders`)
 ### Append only log, example:
 > [!NOTE] To Note
 > - Offset only increases !
@@ -67,7 +68,7 @@ value:      {"order_id": 4217, "customer_id": 88, "status": "paid", "amount": 60
 **[[Kafka Cluster]]**: Set of Brokers that together acts as one Kafka System, usually 3 brokers is the minimum
 - **Broker**: ==One== Kafka Server that stores partition data on its disks and serves producers and consumers
 
-# Cont in kafka cluster
+# To watch
 https://www.youtube.com/watch?v=DU8o-OTeoCc
 
 
