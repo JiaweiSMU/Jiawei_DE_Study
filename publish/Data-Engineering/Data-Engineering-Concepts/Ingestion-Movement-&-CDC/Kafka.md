@@ -68,7 +68,7 @@ value:      {"order_id": 4217, "customer_id": 88, "status": "paid", "amount": 60
 - **Broker**: ==One== Kafka Server that stores partition data on its disks and serves producers and consumers
 
 # Cont in kafka cluster
-
+https://www.youtube.com/watch?v=DU8o-OTeoCc
 
 
 
