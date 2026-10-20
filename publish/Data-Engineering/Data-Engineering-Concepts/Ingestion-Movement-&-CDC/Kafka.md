@@ -11,7 +11,7 @@ topic                                   cluster
      └─ segment (a file on disk)              └─ stores replicas of partitions
          └─ event, at an offset                    (one leader + followers per partition)     
 ```
-### Topic and Partition
+### Topic and [[Partition]]
 - **Topic**: like the name of a table, where ==every row (event) lives in some partition== and the **table name only groups them**. `orders` is a name; `orders` partitions 0, 1 and 2 hold the events. 
 - **Partition**: ==a ordered, append-only log== with its own offsets, starting at 0.
 	- Each event is stored in exactly one partition, chosen by its **key** (**same key → same partition**).
@@ -70,15 +70,9 @@ value:      {"order_id": 4217, "customer_id": 88, "status": "paid", "amount": 60
 - **Consumer**: Client that fetches events from brokers and ==tracks its own offset==.
 **[[Kafka Cluster]]**: Set of brokers that act as one Kafka system. Production clusters usually have **at least 3, so each partition can have 3 replicas**.
 - **Broker**: ==one== Kafka server; stores partition data on its disks and serves producers and consumers.
-# To watch
-https://www.youtube.com/watch?v=DU8o-OTeoCc
 
 
 
 
 
 
-
-
-
-[^1]: Kafka TLDR

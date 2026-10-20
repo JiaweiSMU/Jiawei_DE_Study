@@ -53,10 +53,12 @@
 	- [[Log-based (Write Ahead Logs)]]
 	- [[Trigger-based]]
 	- [[Watermark]]
-- [[Kafka]] - # To watch 
+- [[Kafka]]
 	- [[Consumer Group]]
+		- [[Across groups, every group reads every event.]]
 	- [[Kafka Cluster]]
 		- Kafka [[Metadata]]
+	- [[Partition]]
 - [[Backfill]]
 
 
