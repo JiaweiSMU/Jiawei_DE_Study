@@ -53,8 +53,12 @@
 	- [[Log-based (Write Ahead Logs)]]
 	- [[Trigger-based]]
 	- [[Watermark]]
-- [[Kafka]] - # To watch https://www.youtube.com/watch?v=DU8o-OTeoCc
+- [[Kafka]] - # To watch 
 	- [[Consumer Group]]
 	- [[Kafka Cluster]]
 		- Kafka [[Metadata]]
 - [[Backfill]]
+
+
+
+DB indexing video - https://www.youtube.com/watch?v=BHCSL_ZifI0

@@ -1,6 +1,7 @@
-Kafka **stores events in ==append-only logs==, one log per partition**.
-- Producers write events to a **Topic**, and each event is appended to one partition (`Key`)
-- Consumers read them at their own pace, and reading does not remove them.
+[Kafka TLDR](https://www.youtube.com/watch?v=DU8o-OTeoCc)
+Kafka is a event streaming platform that **stores events in ==append-only logs==, one log per partition**.
+- Producers write ==events to a **Topic**, each event is appended to the one **partition** of that topic== chosen by the event `Key`. All events with the same key land in the same partition and stay in order.
+- Consumers read at their own pace, each [[Consumer Group]] tracking its own offset per partition. A consumer can **read several partitions across several topics,** but **within a group** ==each partition has only one consumer==. Reading doesn’t delete events; retention (time or size) does.
 - Designed for **many ==small events==**: a record batch is limited to about 1 MB by default.
 ### Terminology
 ```text
@@ -40,8 +41,8 @@ offset  key         value
 1       order_4217  {"status": "paid",      "amount": 60}
 2       order_4217  {"status": "shipped",   "amount": 60}
 ```
-### Event
-> [!NOTE] Event
+### Event / Message
+> [!NOTE] Event / Message
 > One entry in a partition's log, identified by `topic + partition + offset`.
 
 | Field              | Set by                | Purpose                                                                                            |
@@ -80,3 +81,4 @@ https://www.youtube.com/watch?v=DU8o-OTeoCc
 
 
 
+[^1]: Kafka TLDR
