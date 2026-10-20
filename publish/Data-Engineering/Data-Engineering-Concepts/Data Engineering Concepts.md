@@ -53,7 +53,7 @@
 	- [[Log-based (Write Ahead Logs)]]
 	- [[Trigger-based]]
 	- [[Watermark]]
-- [[Kafka]]
+- [[Kafka]] - # To watch https://www.youtube.com/watch?v=DU8o-OTeoCc
 	- [[Consumer Group]]
 	- [[Kafka Cluster]]
 		- Kafka [[Metadata]]
