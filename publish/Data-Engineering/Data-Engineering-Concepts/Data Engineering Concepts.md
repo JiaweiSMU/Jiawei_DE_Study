@@ -58,6 +58,7 @@
 		- [[Across groups, every group reads every event.]]
 	- [[Kafka Cluster]]
 		- Kafka [[Metadata]]
+		- Kafka [[Producer Acks]]
 	- [[Partition]]
 - [[Backfill]]
 
