@@ -63,5 +63,6 @@
 - [[Backfill]]
 
 
+To eventually read up about redshift optimization
 
 DB indexing video - https://www.youtube.com/watch?v=BHCSL_ZifI0
