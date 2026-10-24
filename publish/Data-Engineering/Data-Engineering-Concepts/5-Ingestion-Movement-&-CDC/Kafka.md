@@ -11,7 +11,7 @@ topic                                   cluster
      └─ segment (a file on disk)              └─ stores replicas of partitions
          └─ event, at an offset                    (one leader + followers per partition)     
 ```
-### Topic and [[Partition]]
+### Topic and [[Partitioning]]
 - **Topic**: like the name of a table, where ==every row (event) lives in some partition== and the **table name only groups them**. `orders` is a name; `orders` partitions 0, 1 and 2 hold the events. 
 - **Partition**: ==a ordered, append-only log== with its own offsets, starting at 0.
 	- Each event is stored in exactly one partition, chosen by its **key** (**same key → same partition**).

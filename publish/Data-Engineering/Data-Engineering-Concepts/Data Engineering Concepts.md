@@ -6,8 +6,9 @@
 - [[ACID Transactions]]
 - [[Schema On Read]]
 - [[Schema On Write]]
-- [[Partition]]
-	- 
+### Partitions
+- [[Partitioning]]
+- [[Partitioning Strategies]]
 ### Data Architecture![[Pasted image 20261003150123.png]]
 - [[Diff between Data Warehouse, Data Lake and Data Lakehouse]]
 	- [[Data Warehouse]] --> [[Data Mart]]
@@ -61,10 +62,11 @@
 	- [[Kafka Cluster]]
 		- Kafka [[Metadata]]
 		- Kafka [[Producer Acks]]
-	- [[Partition]]
+	- [[Partitioning]]
 - [[Backfill]]
 
 
 To eventually read up about redshift optimization
 
 DB indexing video - https://www.youtube.com/watch?v=BHCSL_ZifI0
+Sys design patterns video - https://www.youtube.com/watch?v=blMWTUVX43U

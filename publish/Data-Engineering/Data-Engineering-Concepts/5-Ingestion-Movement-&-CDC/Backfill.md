@@ -25,7 +25,7 @@ It is needed when re-running the pipeline on today’s source (e.g. the latest e
 	- For 2023Q4: delete 2023Q4 and insert it again in one transaction, or overwrite the 2023Q4 partition.
 	- Appending would count 2023Q4 twice.
 3. **The run depends only on the period it is given.** No `current_date` or “last 30 days” in the logic.
-### [[Partition]]ing
+### [[Partitioning]]
 Partitioning the table by period, e.g. by hour, makes the **partition the unit of a backfill** and only **overwriting the affected partitions**.
 - **What to backfill is easy to find.** Each partition can be checked on its own: is it missing, or was it built with outdated logic?
 - **Replacing is one operation.** Overwriting a partition replaces exactly that period, idempotently and, in table formats like Iceberg, atomically.
