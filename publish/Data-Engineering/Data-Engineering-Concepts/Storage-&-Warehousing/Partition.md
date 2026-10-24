@@ -1,3 +1,6 @@
+Data Management approach, in particular in the incremental way (e.g. each table of events corresponding to a set of hourly partitions)
+- Can make [[Backfill]] simpler
+
 ### **Hot partition**
 A hot partition is a ==partition that receives a disproportionate share of a topic’s traffic==. If one key is far more active than the rest, all of its events go to the same partition.
 - e.g. click events keyed by `ad_id`: a viral ad’s clicks all land in one partition.

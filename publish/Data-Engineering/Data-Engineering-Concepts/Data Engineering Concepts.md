@@ -6,6 +6,8 @@
 - [[ACID Transactions]]
 - [[Schema On Read]]
 - [[Schema On Write]]
+- [[Partition]]
+	- 
 ### Data Architecture![[Pasted image 20261003150123.png]]
 - [[Diff between Data Warehouse, Data Lake and Data Lakehouse]]
 	- [[Data Warehouse]] --> [[Data Mart]]
