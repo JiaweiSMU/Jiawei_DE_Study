@@ -7,6 +7,9 @@
 - [[Schema On Read]]
 - [[Schema On Write]]
 ### Partitions
+- [[Storage Partitioning]]
+- [[Orchestration Partitioning]]
+- [[Execution Partitioning]]
 - [[Partitioning]]
 - [[Partitioning Strategies]]
 ### Data Architecture![[Pasted image 20261003150123.png]]
